@@ -39,6 +39,23 @@ os.removedirs('C:/code-files/os-tutorials')
 os.rename('test.c','test1.c')
 
 #To print out the contents of text file, we can use os.stat().It takes one argument i.e name of file.
+#To get the environment variable of home directory,we can use os.environ.get().We need to pass the enviornment variable HOME in it.
+
+print(os.environ.get('HOME'))
+
+#To check if there exists a true path or not  ,we can use os.path.exists() .You will pass one argument ,i.e path of file=>
+print(os.path.exists('home.txt'))
+
+#To check if any folder is directory or not, we can use os.path.isdir().You will pass one argument ,i.e path of folder =>
+
+print(os.path.isdir('C:/code-files/python-learning'))
+
+#To check if any any given file is valid existing file or not, we can use os.path.isfile().You will pass one argument ,i.e path of file =>
+print(os.path.isfile('C:/code-files/python-learning/libraries/osmodule.py'))
+
+#To split the filename and its extension ,we can use os.path.splitext().You will pass one argument ,i.e path of file=>
+print(os.path.split('C:/code-files/python-learning/libraries/osmodule.py'))
+
 
 
 
