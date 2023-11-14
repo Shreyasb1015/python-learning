@@ -27,6 +27,8 @@ engine.setProperty('volume', 0.7)  # Volume level (0.0 to 1.0) => only floating 
 engine.say('Hi!,I am Shreyas Bagwe. I love coding.')
 
 #For smooth implementation of above speech ,we use a method called engine.runAndWait().
-#This method  for the speech to finish.
+#This method wait for the speech to finish.
 
 engine.runAndWait()
+
+#After the above command is executed ,we can continue our program execution
