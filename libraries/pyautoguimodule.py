@@ -37,5 +37,27 @@ pyautogui.click(200,250)
 
 pyautogui.doubleClick(300,350)
 
+#To scroll the mouse, we can use pyautogui.scroll().It takes one argument.i.e no of clicks to scroll an optional two arguments that is xand y co-ordinate.
+#If we pass 10 as argument,it scroll till 10 clicks.
+#Positive no of scrolls represent to scroll in upwards direction and negative no of scrolls represent to scroll in downward direction.
 
+
+pyautogui.scroll(-400)
+
+#KeyBoard Operations =>
+#The typewrite() function is used to write the something in a text field.It takes 2 arguments ,i.e text to be written and duration in which it should be wrriten.
+
+pyautogui.typewrite('Shreyas Bagwe',2)
+
+#we use the hotkey() function that helps us to press two or more keys at same time.It takes the name of keys as argument.
+pyautogui.hotkey('ctrl','c')
+pyautogui.hotkey('ctrl','v')
+
+#The screenshot() function is used to take the screenshot of the screen at any instance.
+#It will return a PIL object containing the image in a variable. We can also store the screenshot at the desired path .
+
+im1=pyautogui.screenshot()
+
+# Passing a string of a filename will save the screenshot to a file as well as return it as an Image object. 
+im2 = pyautogui.screenshot('my_screenshot.png')
 
