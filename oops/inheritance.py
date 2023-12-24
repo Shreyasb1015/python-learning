@@ -82,7 +82,7 @@ class Employee1(Person1):
     def __init__(self, name, idnumber, salary, post):
         self.salary = salary
         self.post = post
- 
+        
         # invoking the __init__ of the parent class
         Person1.__init__(self, name, idnumber)
  
@@ -91,3 +91,36 @@ a = Employee1('Rahul', 886012, 200000, "Intern")
  
 # calling a function of the class Person using its instance
 a.display()
+
+
+#Super() function -->
+
+# The super() function is a built-in function that returns the objects that represent the parent class. 
+# It allows to access the parent class’s methods and attributes in the child class.
+
+# parent class
+class Person3():
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+ 
+  def display(self):
+    print(self.name, self.age)
+ 
+# child class
+class Student(Person3):
+  def __init__(self, name, age):
+    self.sName = name
+    self.sAge = age
+    # inheriting the properties of parent class
+    super().__init__("Rahul", age)
+ 
+  def displayInfo(self):
+    print(self.sName, self.sAge)
+ 
+obj = Student("Mayank", 23)
+obj.display()
+obj.displayInfo()
+
+## Above all examples are of single inheritance.
+
