@@ -124,3 +124,38 @@ obj.displayInfo()
 
 ## Above all examples are of single inheritance.
 
+### Multiple Inheritance
+
+class Base1():
+    
+    def __init__(self):
+        self.str1="Cricket"
+        print("I am base class 1")
+
+class Base2():
+    
+    def __init__(self):
+        self.str2="Kabbadi"
+        print("I am base class 2")
+        
+class ChildClass(Base1,Base2):
+    
+    def __init__(self):
+        
+        Base1.__init__(self)
+        Base2.__init__(self)
+        print("I am child class")
+        
+        
+    def printStrs(self):
+        print(self.str1, self.str2)
+        
+
+c=ChildClass()
+c.printStrs()
+
+
+#Multilevel Inheritance  
+
+
+
