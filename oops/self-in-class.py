@@ -30,3 +30,34 @@ class Subject:
 obj=Subject('Maths','Science')
 print(obj.attr1)
 print(obj.attr2)
+
+#The self is always pointing to the Current Object.
+#When you create an instance of a class, you’re essentially creating an object with its own set of attributes and methods.
+
+class check():
+    def __init__(self):
+        print("Address of self= ",id,(self))
+
+obj2=check()
+print("Address of object = ",id(obj2))
+
+# Implementing a class with attributes and methods.
+
+class car():
+    
+    def __init__(self,model,color):
+        self.model=model
+        self.color=color
+        
+    def show(self):
+        print("Model = ",self.model)
+        print(" Color is ",self.color)
+        
+audi=car("audi a4","blue")
+ferrari=car("ferrari 488","yellow")
+
+audi.show()
+ferrari.show()
+
+print("Model for audi is ",audi.model)
+print("Colour for ferrari is ",ferrari.color)
