@@ -61,3 +61,25 @@ ferrari.show()
 
 print("Model for audi is ",audi.model)
 print("Colour for ferrari is ",ferrari.color)
+
+
+class Player():
+    
+    def __init__(self,name,quality):
+        self.name=name
+        self.quality=quality
+        
+    def info(self):
+        print("Name: ",self.name)
+        print("Quality: ",self.quality)
+        
+
+p1=Player("Rohit","Pull Shot")
+p1.info()
+
+p2=Player("Virat","Cover Drive")
+p2.info()
+
+p3=Player("Jasprit","Yorkers")
+p3.info()
+        
