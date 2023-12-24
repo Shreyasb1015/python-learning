@@ -61,3 +61,33 @@ s=Sportsman("Rohit")
 print(s.getName(),s.isPlayer())
 
 #In Python, every class inherits from a built-in basic class called ‘object’ i.e class Classname(object)
+
+
+# Case where child class's constructor takes more no of arguments than base class'c constructor.
+
+
+class Person1(object):
+ 
+    # __init__ is known as the constructor
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+ 
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+ 
+# child class
+class Employee1(Person1):
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+ 
+        # invoking the __init__ of the parent class
+        Person1.__init__(self, name, idnumber)
+ 
+# creation of an object variable or an instance
+a = Employee1('Rahul', 886012, 200000, "Intern")
+ 
+# calling a function of the class Person using its instance
+a.display()
