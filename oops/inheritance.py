@@ -32,3 +32,32 @@ Emp_details.display()
 
 Emp_details.Print()
  
+
+#Another example
+
+class Player():
+    
+    def __init__(self,name):
+        self.name=name
+    
+    def getName(self):
+        return self.name
+        
+    def isPlayer(self):
+        return False
+    
+        
+class Sportsman(Player):
+    
+    def isPlayer(self):
+        return True
+    
+#Creating object of parent class
+p=Player("Rohit")
+print(p.getName(),p.isPlayer())
+
+#Creating object of child class
+s=Sportsman("Rohit")
+print(s.getName(),s.isPlayer())
+
+#In Python, every class inherits from a built-in basic class called ‘object’ i.e class Classname(object)
