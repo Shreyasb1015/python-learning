@@ -112,3 +112,23 @@ matches=pattern.finditer(text_to_search)
 for match in matches:
     print(match)
     
+
+## Now ,we will open the file data.txt which contains fake info and we will try to extract the phone nos in the file
+
+with open('data.txt','r',encoding='utf-8') as f:
+    contents=f.read()
+   
+    matches=pattern.finditer(contents)
+    for match in matches:
+       print(match)
+
+#In the above  pattern , we have use . so it will macth al the characters .But if we want ot match only certain meta characters ,we shoudl use [].
+
+pattern=re.compile(r'\d\d\d[-.]\d\d\d[-.]\d\d\d\d')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
+
+#Similary , we use [^] ot match the characters which arent in bracket.
