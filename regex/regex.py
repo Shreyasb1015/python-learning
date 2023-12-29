@@ -79,3 +79,20 @@ matches=pattern.finditer(text_to_search)
 
 for match in matches:
     print(match)
+    
+
+#We use /b for matching word boundary specifying the word and /B to match not a word boundary.
+pattern=re.compile(r'\bHa')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
+
+#We use ^ to match beginning of string and  $ to match end of string
+pattern=re.compile(r'^Start')
+matches=pattern.finditer(sentence)
+
+for match in matches:
+    print(match)
+    
