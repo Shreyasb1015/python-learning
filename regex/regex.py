@@ -103,3 +103,12 @@ matches=pattern.finditer(sentence)
 for match in matches:
     print(match)
     
+
+#Creating a pattern to match both phone numbers (one containing . and other -) in the text_to_search string.
+
+pattern=re.compile(r'\d\d\d.\d\d\d.\d\d\d\d')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
