@@ -96,3 +96,10 @@ matches=pattern.finditer(sentence)
 for match in matches:
     print(match)
     
+#To match end of the string , we use  $ sign.
+pattern=re.compile(r'end$')
+matches=pattern.finditer(sentence)
+
+for match in matches:
+    print(match)
+    
