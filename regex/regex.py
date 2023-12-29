@@ -59,3 +59,23 @@ matches=pattern.finditer(text_to_search)
 
 for match in matches:
     print(match)
+    
+
+# For matching digits , we use /d
+pattern=re.compile(r'\d')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
+## To match any character , i.e not a digits  ,we use \D
+### To match any word character i.e digit or alphabets (bith lower and uppercase), we pass \w
+
+
+#For matching whitespaces ,we use \s
+
+pattern=re.compile(r'\s')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
