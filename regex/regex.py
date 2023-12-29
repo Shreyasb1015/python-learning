@@ -33,3 +33,12 @@ sentence = 'Start a sentence and then bring it to an end'
 #### For e.g if we print('\tTab')  -->output -->  Tab
 #### Now ,if we use raw strings , we will do  --> print(r'\tTab') -> Output \tTab
 
+## To write our patterns that we want to search,we use re.compile method in the variable.
+
+pattern=re.compile(r'abc')
+
+# We use finditer( ) to find the ocurrence of pattern
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
