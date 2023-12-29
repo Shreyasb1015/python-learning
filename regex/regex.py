@@ -20,6 +20,11 @@ coreyms.com
 800-555-1234
 900-555-1234
 
+bat 
+cat
+rat
+fat
+
 Mr. Schafer
 Mr Smith
 Ms Davis
@@ -159,4 +164,22 @@ matches=pattern.finditer(text_to_search)
 for match in matches:
     print(match)
 
-  
+
+
+# If we want to extract the matches which are three letter words which ends with at ,but the word is not bat -->
+pattern=re.compile(r'[^b]at')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
+# Now ,we will use quantifiers.
+#We will use quantifiers to make matching patterns less complicated.For e.g Now, we will search for numbers as we were doing above
+pattern=re.compile(r'\d{3}.\d{3}.\d{4}')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
+#Sometimes ,we dont know the exact numbers of pattern ,in that case we should use other quantifiers.
+# For e.g we will try the extract the names in above string whcih has different salutation i.e Mr. ,Mr,Ms ,etc.
