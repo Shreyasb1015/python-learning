@@ -132,3 +132,31 @@ for match in matches:
     
 
 #Similary , we use [^] ot match the characters which arent in bracket.
+
+# To match the numbers which starts from 800 or 900
+
+pattern=re.compile(r'[89]00[-.]\d\d\d[-.]\d\d\d\d')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
+# Dash character is the special character , when put at start or end , it will only match literal -characters,but when used between numbers it finds the characters in that range.
+# for e.g --> matchinh the digits between  1 and 5
+#pattern=re.compile(r'[1-5]')
+
+# For lower case letters matching --->
+#pattern=re.compile(r'[a-z]')
+
+#For both lower case and upper case matching
+pattern=re.compile(r'[a-zA-Z]')
+
+# If we use ^ character inside [], then it will act as not operator
+#pattern=re.compile(r'[^a-zA-Z]')  -->  Only those characters which arent alphabets
+
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
+  
