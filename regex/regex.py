@@ -199,3 +199,22 @@ matches=pattern.finditer(text_to_search)
 for match in matches:
     print(match)
 
+### We can also use match() which matches the beginning of string
+
+pattern=re.compile(r'Start')
+matches=pattern.match(sentence)
+print(matches)
+
+### we also have search() which returns us first match of the string
+
+pattern=re.compile(r'sentence')
+matches=pattern.search(sentence)
+print(matches)
+
+## If we have to match the beginning of string and wehn we dont know about case of letters ,i.e it can be lower case or upper case also.
+### In such situations,we use flags.
+
+pattern=re.compile(r'start',re.IGNORECASE)
+matches=pattern.search(sentence)
+print(matches)
+
