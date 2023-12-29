@@ -42,3 +42,20 @@ matches=pattern.finditer(text_to_search)
 
 for match in matches:
     print(match)
+    
+
+#To search any metacharacters, we need to escape the character by adding \ in front of it.
+
+pattern=re.compile(r'\.')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+    
+#To match any url which contains meta character like . , we need to specify it .
+
+pattern=re.compile(r'coreyms\.com')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
