@@ -182,4 +182,20 @@ for match in matches:
     print(match)
 
 #Sometimes ,we dont know the exact numbers of pattern ,in that case we should use other quantifiers.
-# For e.g we will try the extract the names in above string whcih has different salutation i.e Mr. ,Mr,Ms ,etc.
+# For e.g we will try the extract the names in above string which has different salutation i.e Mr. ,Mr ,etc.
+
+# we use ? character to state that specified character is optional
+pattern=re.compile(r'Mr\.?\s[A-Z]\w*')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
+#Now ,we will try to match Mrs , Ms also.
+#For that we can use | or operator or () group operator.
+pattern=re.compile(r'M(r|s|rs)\.?\s[A-Z]\w*')
+matches=pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
