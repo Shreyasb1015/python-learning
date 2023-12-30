@@ -106,3 +106,11 @@ with open('test.txt','r') as rf:
     with open('test_copy.txt','w') as wf:
        for line in rf:
            wf.write(line)
+           
+# Now , lets look at copying the image file.
+### To make a copy of image ,we should open the file in binary mode,i.e we should specify 'rb' and 'wb' as arguments in open method.
+
+with open('pic1.jpg','rb') as rf:
+    with open('pic1_copy.jpg','wb') as wf:
+       for line in rf:
+           wf.write(line)
