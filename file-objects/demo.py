@@ -18,3 +18,23 @@ f.close()
 with open('test.txt','r') as f:
     print(f.name)
     
+
+#To read the file, we can use the read method.
+
+with open('test.txt','r') as f:
+    f_contents = f.read()
+    f_lines=f.readlines()
+    f_firstLine=f.readline
+    print(f_contents)
+    print(f_lines)
+    print(f_firstLine)
+    
+#To read the lines , we can use the readlines method.
+#To read first line from the file, we can use the readline method.
+
+with open('test.txt','r') as f:
+   
+    f_lines=f.readlines()
+    f_firstLine=f.readline
+    print(f_lines)
+    print(f_firstLine)
