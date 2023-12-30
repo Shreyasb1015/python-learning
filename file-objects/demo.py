@@ -71,3 +71,21 @@ with open('test.txt','r') as f:
     while len(f_contents)>0:
         print(f_contents,end='')
         f_contents=f.read(size_to_read)
+        
+## We can use tell method to tell the current position of the cursor in the file.
+with open('test.txt','r') as f:
+    size_to_read=100
+    f_contents = f.read(size_to_read)
+    print(f.tell())
+    
+# We can use f.seek() method to change the position of the cursor in the file.
+#For e.g to set the cursor at starting -->
+
+with open('test.txt','r') as f:
+    size_to_read=10
+    f_contents = f.read(size_to_read)
+    print(f_contents,end='')
+    
+    f.seek(0)
+    f_contents=f.read(size_to_read)
+    print(f_contents)
