@@ -89,3 +89,12 @@ with open('test.txt','r') as f:
     f.seek(0)
     f_contents=f.read(size_to_read)
     print(f_contents)
+    
+#Now , lets look at writing to the file.
+
+#While writing ,if file doesnt exists , it creates the file and if file exists alreadty , it overwrites the file.
+
+with open('test1.txt','w') as f:
+    f.write('Hi, I m Shreyas')
+    
+# We can also use here seek()) method to change the position of the cursor in the file and go to the beginning of the file.
