@@ -38,3 +38,18 @@ with open('test.txt','r') as f:
     f_firstLine=f.readline
     print(f_lines)
     print(f_firstLine)
+    
+# We can read line by line using readline method.At first ,it reads first line ,then it reads second line and so on.
+with open('test.txt','r') as f:
+    f_line=f.readline()
+    print(f_line,end='')
+    
+    f_line=f.readline()
+    print(f_line,end='')
+    
+
+# We can  read all the lines using for loop.
+with open('test.txt','r') as f:
+    
+    for line in f:
+        print(line,end='')
