@@ -101,6 +101,7 @@ with open('test1.txt','w') as f:
 
 
 #We can also copy the contents of one file to another file. For that we use double with statement.
+## We copy each line in the rf file to wf file.
 
 with open('test.txt','r') as rf:
     with open('test_copy.txt','w') as wf:
