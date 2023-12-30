@@ -53,3 +53,21 @@ with open('test.txt','r') as f:
     
     for line in f:
         print(line,end='')
+        
+
+## We can also specify the number of characters to read from the file as argument in the read func. This helps us when file is too large.
+
+with open('test.txt','r') as f:
+    f_contents = f.read(100)
+    print(f_contents,end='')
+    
+
+## We can actually read the large files in chunks by specifying no of characters to be read in one go.When the file has nothing left to read ,it returns null list.
+
+with open('test.txt','r') as f:
+    size_to_read=100
+    f_contents = f.read(size_to_read)
+    
+    while len(f_contents)>0:
+        print(f_contents,end='')
+        f_contents=f.read(size_to_read)
