@@ -98,3 +98,11 @@ with open('test1.txt','w') as f:
     f.write('Hi, I m Shreyas')
     
 # We can also use here seek()) method to change the position of the cursor in the file and go to the beginning of the file.
+
+
+#We can also copy the contents of one file to another file. For that we use double with statement.
+
+with open('test.txt','r') as rf:
+    with open('test_copy.txt','w') as wf:
+       for line in rf:
+           wf.write(line)
