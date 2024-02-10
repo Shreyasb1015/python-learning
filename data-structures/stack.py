@@ -1,6 +1,6 @@
 class Stack():
 
-    def _init_(self):
+    def __init__(self):
         self.s=[]
     
     def push(self,ele):
@@ -9,7 +9,6 @@ class Stack():
     def pop(self):
         try:
             self.s.pop()
-            print(self.s)
         except  IndexError:
             print("Stack has no element to pop")
     
@@ -23,13 +22,18 @@ class Stack():
     
     def peek(self):
         try:
-          print(self.s[-1])
+          return (self.s[-1])
         except ValueError:
             print('Stack is empty')
+            return None
     
     def reversestack(self):
        reversed_stack=list(reversed(self.s))
        print(reversed_stack)
 
     def printstack(self):
-            print(self.s)
+        print(self.s)
+        
+    def isEmpty(self):
+        return len(self.s) == 0
+    
